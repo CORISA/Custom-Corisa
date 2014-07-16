@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ANSI_X3.4-1968" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <jardesc>
     <jar path="Custom-Corisa/packages/Custom-Corisa/lib/Custom-Corisa.jar"/>
     <options buildIfNeeded="true" compress="true" descriptionLocation="/Custom-Corisa/Custom-CorisaJarDesc.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="true" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
@@ -12,8 +12,9 @@
     </manifest>
     <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
         <javaElement handleIdentifier="=Custom-Corisa/ad"/>
-        <javaElement handleIdentifier="=Custom-Corisa/client"/>
+        <javaElement handleIdentifier="=Custom-Corisa/serverRoot\/src\/main\/server"/>
         <javaElement handleIdentifier="=Custom-Corisa/base"/>
+        <javaElement handleIdentifier="=Custom-Corisa/client"/>
         <javaElement handleIdentifier="=Custom-Corisa/extend"/>
     </selectedElements>
 </jardesc>
