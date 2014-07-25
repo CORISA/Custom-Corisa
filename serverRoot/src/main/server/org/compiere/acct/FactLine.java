@@ -322,12 +322,12 @@ public final class FactLine extends X_Fact_Acct
 			setUser2_ID (m_docLine.getUser2_ID());
 		if (getUser2_ID() == 0)
 			setUser2_ID (m_doc.getUser2_ID());
-		//	2014-07-16 Jorge Colmenarez set C_Charge_ID
+		//	References in setAccount
+		//	2014-07-23 Jorge Colmenarez set C_Charge_ID
 		if (m_docLine != null)
 			if (m_docLine.getC_Charge_ID()!=0)
 				set_CustomColumn("C_Charge_ID",m_docLine.getC_Charge_ID());
 		//End Jorge Colmenarez
-		//	References in setAccount
 	}   //  setDocumentInfo
 
 	/**

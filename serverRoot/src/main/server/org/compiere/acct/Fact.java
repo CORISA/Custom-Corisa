@@ -134,7 +134,7 @@ public final class Fact
 		line.setDocumentInfo(m_doc, docLine);
 		line.setPostingType(m_postingType);
 		line.setAccount(m_acctSchema, account);
-		//	2014-07-16 Jorge Colmenarez set C_Charge_ID
+		//	2014-07-23 Jorge Colmenarez set C_Charge_ID
 		if (docLine != null)
 			if (docLine.getC_Charge_ID()!=0)
 				line.set_CustomColumn("C_Charge_ID",docLine.getC_Charge_ID());
