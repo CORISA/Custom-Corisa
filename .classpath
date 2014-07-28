@@ -4,7 +4,6 @@
 	<classpathentry kind="src" path="client"/>
 	<classpathentry kind="src" path="extend"/>
 	<classpathentry kind="src" path="ad"/>
-	<classpathentry kind="src" path="serverRoot/src/main/server"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/Compiere_iac33"/>
 	<classpathentry kind="lib" path="/opt/Development/workspace/Compiere_iac33/lib/CCTools.jar"/>
