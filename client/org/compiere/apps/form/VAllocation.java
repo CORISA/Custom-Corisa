@@ -431,7 +431,7 @@ public class VAllocation extends CPanel
 			+ "FROM C_Invoice_v i"		//  corrected for CM/Split
 			+ " INNER JOIN C_Currency c ON (i.C_Currency_ID=c.C_Currency_ID) "
 //			+ "WHERE (i.IsPaid='N') AND i.Processed='Y'" // AVANTED PRIME LOCALIZACION
-			+ "WHERE ((invoiceopen(c_invoice_id,c_invoicepayschedule_id) <> 0 AND i.docstatus NOT IN ('DR','IP','IN')) or i.isindispute ='Y') AND i.Processed='Y'" // AVANTED PRIME LOCALIZACION
+			+ "WHERE ((invoiceopen(c_invoice_id,0) <> 0 AND i.docstatus NOT IN ('DR','IP','IN')) or i.isindispute ='Y') AND i.Processed='Y'" // AVANTED PRIME LOCALIZACION
 			+ " AND i.C_BPartner_ID=?");                                            //  #5
 		if (!multiCurrency.isSelected())
 			sql.append(" AND i.C_Currency_ID=?");                                   //  #6
