@@ -107,7 +107,24 @@ public class ImportInventory extends SvrProcess
 	protected String doIt() throws java.lang.Exception
 	{
 		log.info("M_Locator_ID=" + p_M_Locator_ID + ",MovementDate=" + p_MovementDate);
-		//
+		//	Added By Jorge Colmenarez 2015-12-10 12:32 
+		//	Validated Parameter Mandatory for Update Costing
+		if (p_UpdateCosting) {
+			if (p_C_AcctSchema_ID <= 0) {
+				throw new IllegalArgumentException("Accounting Schema required!");
+			}
+			if (p_M_CostType_ID <= 0) {
+				throw new IllegalArgumentException("Cost Type required!");
+			}
+			if (p_M_CostElement_ID <= 0 ) {
+				throw new IllegalArgumentException("Cost Element required!");
+			}
+			if (p_AD_OrgTrx_ID < 0 ) {
+				throw new IllegalArgumentException("AD_OrgTrx required!");
+			}
+			 acctSchema = MAcctSchema.get(getCtx(), p_C_AcctSchema_ID, get_TrxName());
+		}
+		//	End Jorge Colmenarez
 		StringBuffer sql = null;
 		int no = 0;
 		String clientCheck = " AND AD_Client_ID=" + p_AD_Client_ID;
