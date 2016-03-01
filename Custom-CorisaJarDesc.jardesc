@@ -13,8 +13,8 @@
     <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
         <file path="/Custom-Corisa/.classpath"/>
         <javaElement handleIdentifier="=Custom-Corisa/ad"/>
-        <javaElement handleIdentifier="=Custom-Corisa/client"/>
         <javaElement handleIdentifier="=Custom-Corisa/base"/>
+        <javaElement handleIdentifier="=Custom-Corisa/client"/>
         <file path="/Custom-Corisa/.project"/>
         <javaElement handleIdentifier="=Custom-Corisa/extend"/>
     </selectedElements>
