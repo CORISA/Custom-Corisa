@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 
 import org.compiere.util.DB;
+import org.compiere.util.Trx;
 
 /**
  * @author Carlos Parada
@@ -58,12 +59,14 @@ public class MXX_ARCV {
 	 * */
 	private ResultSet InsertXX_ARCV() throws SQLException
 	{
-		ResultSet rs = null;
 		StringBuffer sql = new StringBuffer();
 		getSql(sql);
-		PreparedStatement ps = DB.prepareStatement(sql.toString(), null);
-		ps.execute();
-		rs=ps.getResultSet();
+		String trxName = "XXARCV";
+		Trx trx = Trx.get(trxName);
+		PreparedStatement ps = null;
+		ps = DB.prepareStatement(sql.toString(),trx);
+		ResultSet rs = ps.executeQuery();
+		trx.commit();
 		return rs;
 	}
 	/**
